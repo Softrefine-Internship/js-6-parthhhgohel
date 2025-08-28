@@ -9,6 +9,8 @@ const main = async function(){
     const data = await Promise.all([
         getJSON('https://restcountries.com/v2/name/portugal'),
         getJSON('https://restcountries.com/v2/name/usa'),
+        getJSON('https://restcountries.com/v2/name/china'),
+        getJSON('https://restcountries.com/v2/name/bharat'),
     ]);
 
     data.forEach((item) => {

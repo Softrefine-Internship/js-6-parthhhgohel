@@ -15,6 +15,7 @@ function fetchData(url, timeout = 5000) {
       clearTimeout(timeoutId);
       return response.json();
     })
+    
     .catch(error => {
       if (error.name === 'AbortError') {
         console.log('Request timed out');
@@ -24,6 +25,6 @@ function fetchData(url, timeout = 5000) {
     });
 }
 
-fetchData('https://restcountries.com/v2/name/portugal', 100)
+fetchData('https://restcountries.com/v2/name/portugal', 10000)
   .then(data => console.log(data))
   .catch(error => console.error(error));
